@@ -28,6 +28,17 @@ public class DogBuddy {
      * @return String of woofs
      */
     public static String howManyWoofs(int numBones) {
+        if (numBones <= 0 ) {
+            return "...";
+        }
+        // If there is an even number of bones, your dog will bark three times
+        if (numBones % 2 == 0) {
+            return "Woof! Woof! Woof!";
+            // If there is an odd number, they'll bark twice!
+        } else if (numBones % 2 != 0 ) {
+            return "Woof! Woof!";
+            // If there are none, there is only a silence (ex: "...")
+        }
         return "Woof";
     }
 }

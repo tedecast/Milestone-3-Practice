@@ -1,28 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tsg.unittesting.HowManyWoofsTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in com.tsg.unittesting.HowManyWoofsTest
-testTwoBones  Time elapsed: 0 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected 3 Woofs w/ 2 bones ==> expected: <Woof! Woof! Woof!> but was: <Woof>
-	at com.tsg.unittesting.HowManyWoofsTest.testTwoBones(HowManyWoofsTest.java:65)
-
-testNegativeTenBones  Time elapsed: 0 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected silence w/ -10 bones ==> expected: <...> but was: <Woof>
-	at com.tsg.unittesting.HowManyWoofsTest.testNegativeTenBones(HowManyWoofsTest.java:91)
-
-testTenBones  Time elapsed: 0 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected 3 Woofs w/ 10 bones ==> expected: <Woof! Woof! Woof!> but was: <Woof>
-	at com.tsg.unittesting.HowManyWoofsTest.testTenBones(HowManyWoofsTest.java:40)
-
-testFiveBones  Time elapsed: 0 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <Woof! Woof!> but was: <Woof>
-	at com.tsg.unittesting.HowManyWoofsTest.testFiveBones(HowManyWoofsTest.java:52)
-
-testZeroBones  Time elapsed: 0 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected silence w/ 0 bones ==> expected: <...> but was: <Woof>
-	at com.tsg.unittesting.HowManyWoofsTest.testZeroBones(HowManyWoofsTest.java:78)
-
-testNegativeFiveBones  Time elapsed: 0 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected silence w/ -5 bones ==> expected: <...> but was: <Woof>
-	at com.tsg.unittesting.HowManyWoofsTest.testNegativeFiveBones(HowManyWoofsTest.java:104)
-
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec - in com.tsg.unittesting.HowManyWoofsTest

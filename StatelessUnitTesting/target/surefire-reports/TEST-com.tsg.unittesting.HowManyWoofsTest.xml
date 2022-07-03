@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.tsg.unittesting.HowManyWoofsTest" time="0" tests="6" errors="0" skipped="0" failures="6">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.tsg.unittesting.HowManyWoofsTest" time="0.018" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.15+10"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.15.10-hotspot\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Teresa\Desktop\Classwork\StatelessUnitTesting"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Teresa\Desktop\Milestone 3 Practice\StatelessUnitTesting"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -14,8 +14,9 @@
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="test" value="com.tsg.unittesting.HowManyWoofsTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Teresa\Desktop\Classwork\StatelessUnitTesting"/>
+    <property name="user.dir" value="C:\Users\Teresa\Desktop\Milestone 3 Practice\StatelessUnitTesting"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="11.0.15+10"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
@@ -45,7 +46,7 @@
     <property name="java.class.path" value="C:\Program Files\NetBeans-12.0\netbeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.0\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.tsg.unittesting.HowManyWoofsTest -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.0\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 test-compile surefire:test"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-11.0.15.10-hotspot"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -63,34 +64,10 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testTwoBones" classname="com.tsg.unittesting.HowManyWoofsTest" time="0">
-    <failure message="Expected 3 Woofs w/ 2 bones ==&gt; expected: &lt;Woof! Woof! Woof!&gt; but was: &lt;Woof&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Expected 3 Woofs w/ 2 bones ==> expected: <Woof! Woof! Woof!> but was: <Woof>
-	at com.tsg.unittesting.HowManyWoofsTest.testTwoBones(HowManyWoofsTest.java:65)
-]]></failure>
-  </testcase>
-  <testcase name="testNegativeTenBones" classname="com.tsg.unittesting.HowManyWoofsTest" time="0">
-    <failure message="Expected silence w/ -10 bones ==&gt; expected: &lt;...&gt; but was: &lt;Woof&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Expected silence w/ -10 bones ==> expected: <...> but was: <Woof>
-	at com.tsg.unittesting.HowManyWoofsTest.testNegativeTenBones(HowManyWoofsTest.java:91)
-]]></failure>
-  </testcase>
-  <testcase name="testTenBones" classname="com.tsg.unittesting.HowManyWoofsTest" time="0">
-    <failure message="Expected 3 Woofs w/ 10 bones ==&gt; expected: &lt;Woof! Woof! Woof!&gt; but was: &lt;Woof&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Expected 3 Woofs w/ 10 bones ==> expected: <Woof! Woof! Woof!> but was: <Woof>
-	at com.tsg.unittesting.HowManyWoofsTest.testTenBones(HowManyWoofsTest.java:40)
-]]></failure>
-  </testcase>
-  <testcase name="testFiveBones" classname="com.tsg.unittesting.HowManyWoofsTest" time="0">
-    <failure message="expected: &lt;Woof! Woof!&gt; but was: &lt;Woof&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Woof! Woof!> but was: <Woof>
-	at com.tsg.unittesting.HowManyWoofsTest.testFiveBones(HowManyWoofsTest.java:52)
-]]></failure>
-  </testcase>
-  <testcase name="testZeroBones" classname="com.tsg.unittesting.HowManyWoofsTest" time="0">
-    <failure message="Expected silence w/ 0 bones ==&gt; expected: &lt;...&gt; but was: &lt;Woof&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Expected silence w/ 0 bones ==> expected: <...> but was: <Woof>
-	at com.tsg.unittesting.HowManyWoofsTest.testZeroBones(HowManyWoofsTest.java:78)
-]]></failure>
-  </testcase>
-  <testcase name="testNegativeFiveBones" classname="com.tsg.unittesting.HowManyWoofsTest" time="0">
-    <failure message="Expected silence w/ -5 bones ==&gt; expected: &lt;...&gt; but was: &lt;Woof&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Expected silence w/ -5 bones ==> expected: <...> but was: <Woof>
-	at com.tsg.unittesting.HowManyWoofsTest.testNegativeFiveBones(HowManyWoofsTest.java:104)
-]]></failure>
-  </testcase>
+  <testcase name="testTwoBones" classname="com.tsg.unittesting.HowManyWoofsTest" time="0.014"/>
+  <testcase name="testNegativeTenBones" classname="com.tsg.unittesting.HowManyWoofsTest" time="0"/>
+  <testcase name="testTenBones" classname="com.tsg.unittesting.HowManyWoofsTest" time="0.001"/>
+  <testcase name="testFiveBones" classname="com.tsg.unittesting.HowManyWoofsTest" time="0"/>
+  <testcase name="testZeroBones" classname="com.tsg.unittesting.HowManyWoofsTest" time="0"/>
+  <testcase name="testNegativeFiveBones" classname="com.tsg.unittesting.HowManyWoofsTest" time="0"/>
 </testsuite>

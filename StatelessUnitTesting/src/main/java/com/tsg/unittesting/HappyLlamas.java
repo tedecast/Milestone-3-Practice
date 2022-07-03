@@ -17,7 +17,7 @@ public class HappyLlamas {
      * When llamas get together they like to bounce on trampolines.
      * However, llamas are very particular about the proper number of trampolines, 
      * and are usually only happy if there are between 24 to 42 (inclusive!).
-     * This only changes if the trampolines are made of ultra-bouncey NASA fabric.
+     * This only changes if the trampolines are made of ultra-bouncy NASA fabric.
      * In those cases, while they still require at LEAST 24, the llamas figure
      * the more trampolines the better!
      * 
@@ -34,6 +34,11 @@ public class HappyLlamas {
      * @return boolean indicating if the llama's are happy
      */
     public static boolean areTheLlamasHappy(boolean ultraBouncy, int trampolines) {
+        if(trampolines >= 24 && trampolines <= 42) {
+            return true;
+        } else if (trampolines >= 24 && ultraBouncy == true) {
+            return true;
+        }
         return false;
     }
     

@@ -63,7 +63,7 @@ public class HappyLlamasTest {
     	
     	// ARRANGE ACT & ASSERT - w/ Msg
         assertTrue( areTheLlamasHappy(false, 24) , "24 Llamas w/ Normal Trampolines should be Happy!" );
-        fail("The test case failed!");
+       
     }
     
     @Test

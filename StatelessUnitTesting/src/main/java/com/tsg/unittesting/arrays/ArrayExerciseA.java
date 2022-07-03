@@ -22,6 +22,10 @@ public class ArrayExerciseA {
      * @return int max
      */
     public static int maxOfArray(int[] numbers){
+        int currentLargestNumber = 0;
+        for(int number : numbers ) {
+            
+        }
         return 3;
     }
     

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.tsg.unittesting.HappyLlamasTest" time="0.031" tests="11" errors="0" skipped="0" failures="7">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.tsg.unittesting.HappyLlamasTest" time="0.021" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.15+10"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.15.10-hotspot\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Teresa\Desktop\Classwork\StatelessUnitTesting"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Teresa\Desktop\Milestone 3 Practice\StatelessUnitTesting"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="java.vendor.url" value="https://adoptium.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="test" value="com.tsg.unittesting.HappyLlamasTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Teresa\Desktop\Classwork\StatelessUnitTesting"/>
+    <property name="user.dir" value="C:\Users\Teresa\Desktop\Milestone 3 Practice\StatelessUnitTesting"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="11.0.15+10"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
@@ -65,42 +65,14 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase name="testUltraBouncyTrampoline10" classname="com.tsg.unittesting.HappyLlamasTest" time="0.014"/>
-  <testcase name="testUltraBouncyTrampoline24" classname="com.tsg.unittesting.HappyLlamasTest" time="0.008">
-    <failure message="24 Llamas w/ UltraBouncy Trampolines should be Happy! ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 24 Llamas w/ UltraBouncy Trampolines should be Happy! ==> expected: <true> but was: <false>
-	at com.tsg.unittesting.HappyLlamasTest.testUltraBouncyTrampoline24(HappyLlamasTest.java:130)
-]]></failure>
-  </testcase>
-  <testcase name="testUltraBouncyTrampoline30" classname="com.tsg.unittesting.HappyLlamasTest" time="0">
-    <failure message="30 Llamas w/ UltraBouncy Trampolines should be Happy! ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 30 Llamas w/ UltraBouncy Trampolines should be Happy! ==> expected: <true> but was: <false>
-	at com.tsg.unittesting.HappyLlamasTest.testUltraBouncyTrampoline30(HappyLlamasTest.java:143)
-]]></failure>
-  </testcase>
-  <testcase name="testUltraBouncyTrampoline42" classname="com.tsg.unittesting.HappyLlamasTest" time="0.001">
-    <failure message="42 Llamas w/ UltraBouncy Trampolines should be Happy! ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 42 Llamas w/ UltraBouncy Trampolines should be Happy! ==> expected: <true> but was: <false>
-	at com.tsg.unittesting.HappyLlamasTest.testUltraBouncyTrampoline42(HappyLlamasTest.java:156)
-]]></failure>
-  </testcase>
-  <testcase name="testUltraBouncyTrampoline50" classname="com.tsg.unittesting.HappyLlamasTest" time="0.001">
-    <failure message="60 Llamas w/ UltraBouncy Trampolines should be Happy! ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 60 Llamas w/ UltraBouncy Trampolines should be Happy! ==> expected: <true> but was: <false>
-	at com.tsg.unittesting.HappyLlamasTest.testUltraBouncyTrampoline50(HappyLlamasTest.java:169)
-]]></failure>
-  </testcase>
+  <testcase name="testUltraBouncyTrampoline24" classname="com.tsg.unittesting.HappyLlamasTest" time="0"/>
+  <testcase name="testUltraBouncyTrampoline30" classname="com.tsg.unittesting.HappyLlamasTest" time="0"/>
+  <testcase name="testUltraBouncyTrampoline42" classname="com.tsg.unittesting.HappyLlamasTest" time="0.001"/>
+  <testcase name="testUltraBouncyTrampoline50" classname="com.tsg.unittesting.HappyLlamasTest" time="0"/>
   <testcase name="testNormalTrampoline10" classname="com.tsg.unittesting.HappyLlamasTest" time="0"/>
-  <testcase name="testNormalTrampoline24" classname="com.tsg.unittesting.HappyLlamasTest" time="0.001">
-    <failure message="24 Llamas w/ Normal Trampolines should be Happy! ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 24 Llamas w/ Normal Trampolines should be Happy! ==> expected: <true> but was: <false>
-	at com.tsg.unittesting.HappyLlamasTest.testNormalTrampoline24(HappyLlamasTest.java:64)
-]]></failure>
-  </testcase>
-  <testcase name="testNormalTrampoline30" classname="com.tsg.unittesting.HappyLlamasTest" time="0.001">
-    <failure message="30 Llamas w/ Normal Trampolines should be Happy! ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 30 Llamas w/ Normal Trampolines should be Happy! ==> expected: <true> but was: <false>
-	at com.tsg.unittesting.HappyLlamasTest.testNormalTrampoline30(HappyLlamasTest.java:78)
-]]></failure>
-  </testcase>
-  <testcase name="testNormalTrampoline42" classname="com.tsg.unittesting.HappyLlamasTest" time="0">
-    <failure message="42 Llamas w/ Normal Trampolines should be Happy! ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 42 Llamas w/ Normal Trampolines should be Happy! ==> expected: <true> but was: <false>
-	at com.tsg.unittesting.HappyLlamasTest.testNormalTrampoline42(HappyLlamasTest.java:91)
-]]></failure>
-  </testcase>
-  <testcase name="testNormalTrampoline50" classname="com.tsg.unittesting.HappyLlamasTest" time="0.001"/>
-  <testcase name="testAreTheLlamasHappy" classname="com.tsg.unittesting.HappyLlamasTest" time="0"/>
+  <testcase name="testNormalTrampoline24" classname="com.tsg.unittesting.HappyLlamasTest" time="0"/>
+  <testcase name="testNormalTrampoline30" classname="com.tsg.unittesting.HappyLlamasTest" time="0"/>
+  <testcase name="testNormalTrampoline42" classname="com.tsg.unittesting.HappyLlamasTest" time="0.001"/>
+  <testcase name="testNormalTrampoline50" classname="com.tsg.unittesting.HappyLlamasTest" time="0"/>
+  <testcase name="testAreTheLlamasHappy" classname="com.tsg.unittesting.HappyLlamasTest" time="0.001"/>
 </testsuite>
