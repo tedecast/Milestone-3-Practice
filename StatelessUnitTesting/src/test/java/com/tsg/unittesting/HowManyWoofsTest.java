@@ -33,7 +33,7 @@ public class HowManyWoofsTest {
         int numBones = 10;
         
         // ACT
-        String woofs = howManyWoofs(10);
+        String woofs = howManyWoofs(numBones);
         
         // ASSERT - w/ Message
         String expectedWoofs = "Woof! Woof! Woof!";

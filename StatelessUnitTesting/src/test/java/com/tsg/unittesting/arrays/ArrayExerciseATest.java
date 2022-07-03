@@ -22,12 +22,12 @@ public class ArrayExerciseATest {
     @Test
     public void testMaxOfArray() {
         // ARRANGE
+        int expectedLargestNumber = 7;
         int[] numbers = {3, 5, 7, 0};
         // ACT
         int max = maxOfArray(numbers);
         // ASSERT - w/ Message
-        String fail = "fail";
-        assertArray(fail, max, "Expected 3 is the max in the array");
+        assertEquals(expectedLargestNumber, max, "Expected 7 as the max.");
     }
     
 }
