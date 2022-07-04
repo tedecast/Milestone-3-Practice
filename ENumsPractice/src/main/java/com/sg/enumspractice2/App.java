@@ -15,16 +15,18 @@ public class App {
     public static void main(String[] args) {
         // asks the user to enter a day of the week
         Scanner userInput = new Scanner(System.in);
-        
         System.out.println("Please enter a day of the week.");
-        String day = userInput.nextLine();
+        String dayStr = userInput.nextLine();
+        
+        // convert String to enum - DaysOfTheWeek
+        DaysOfTheWeek day = DaysOfTheWeek.valueOf(dayStr.toUpperCase()); 
         
         // then use a switch statement and your enum to print out 
-        DaysOfTheWeek[] dayOfWeek = DaysOfTheWeek.values();
-        for(DaysOfTheWeek today : dayOfWeek){
+//        DaysOfTheWeek[] dayOfWeek = DaysOfTheWeek.values();
+//        for(DaysOfTheWeek today : dayOfWeek){
             // how many days there are until Friday
             // Using Enum in Switch case statement
-            switch(today){
+            switch(day){
                 case SUNDAY:
                     System.out.println("Sunday is FUNday!");
                     break;
@@ -51,4 +53,4 @@ public class App {
         }
     }
      
-}
+//}
