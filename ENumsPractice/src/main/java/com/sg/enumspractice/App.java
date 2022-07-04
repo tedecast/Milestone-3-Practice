@@ -18,18 +18,21 @@ public class App {
         System.out.println("Please to enter a number.");
         int operand1 = Integer.parseInt(userInput.nextLine());
         
-        System.out.println("Please enter another number");
+        System.out.println("Please enter another number.");
         int operand2 = Integer.parseInt(userInput.nextLine());
         
         System.out.println("Please choose whether you want these numbers to plus, minus, multiply or divide.");
         String mathStr = userInput.nextLine();
         MathOperator math = MathOperator.valueOf(mathStr.toUpperCase());
+        //Output your results to the screen after every operation is performed
+        System.out.println("Result: " + math.calculate(math, operand1, operand2));
         
-        int sum = 0;
-        switch(math){
-            case PLUS:
-                sum = operand1 + operand2;
-                System.out.println(operand1 + " + " + operand2 + " = " + sum);
-        }
+//        System.out.println(operand1 + " + " + operand2 + " + " + " = " + math.calculate(math, operand1, operand2));
+//        int sum = 0;
+//        switch(math){
+//            case PLUS:
+//                sum = operand1 + operand2;
+//                System.out.println(operand1 + " + " + operand2 + " = " + sum );
+//        }
     }
 }
