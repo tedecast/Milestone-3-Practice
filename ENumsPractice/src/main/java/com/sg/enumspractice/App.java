@@ -9,6 +9,8 @@ package com.sg.enumspractice;
  *
  * @author Teresa
  */
-public enum MathOperator {
-    PLUS, MINUS, MULTIPLY, DIVIDE
+public class App {
+    public static void main(String[] args) {
+        MathOperator[] math  = MathOperator.values();
+    }
 }

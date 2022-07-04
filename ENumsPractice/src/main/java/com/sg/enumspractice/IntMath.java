@@ -10,7 +10,7 @@ package com.sg.enumspractice;
  * @author Teresa
  */
 public class IntMath {
-
+    
     public int calculate(MathOperator operator, int operand1, int operand2) {
         
         switch(operator){
