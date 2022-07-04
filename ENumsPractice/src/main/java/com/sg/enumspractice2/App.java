@@ -17,7 +17,6 @@ public class App {
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please enter a day of the week.");
         String dayStr = userInput.nextLine();
-        
         // convert String to enum - DaysOfTheWeek
         DaysOfTheWeek day = DaysOfTheWeek.valueOf(dayStr.toUpperCase()); 
         
