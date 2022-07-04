@@ -89,7 +89,7 @@ public class App {
         ld = zdt.toLocalDate();
         System.out.println(ld);
         
-        // gregorian, more conversions. 
+        // gregorian, more conversions 
         zdt = legacyCalender.toZonedDateTime();
         ld = zdt.toLocalDate();
         System.out.println(ld);
