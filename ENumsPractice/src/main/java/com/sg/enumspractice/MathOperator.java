@@ -9,6 +9,6 @@ package com.sg.enumspractice;
  *
  * @author Teresa
  */
-public enum DaysOfTheWeek {
+public enum MathOperator {
     
 }

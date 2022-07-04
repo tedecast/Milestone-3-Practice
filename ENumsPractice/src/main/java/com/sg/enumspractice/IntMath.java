@@ -10,7 +10,9 @@ package com.sg.enumspractice;
  * @author Teresa
  */
 public class IntMath {
+
     public int calculate(MathOperator operator, int operand1, int operand2) {
+        
         switch(operator){
             case PLUS:
                 return operand1 + operand2;
@@ -23,8 +25,6 @@ public class IntMath {
             default:
                 throw new UnsupportedOperationException();
         }
-    }
-    public enum MathOperator {
-        PLUS, MINUS, MULTIPLY, DIVIDE
-    }
+    } 
+    
 }
