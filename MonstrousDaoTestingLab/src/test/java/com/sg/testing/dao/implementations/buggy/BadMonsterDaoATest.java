@@ -33,9 +33,6 @@ public class BadMonsterDaoATest{
     
     @BeforeEach
     public void setUp() throws Exception {
-        String testFile = "testroster.txt";
-        // Use the FileWrite to quickly blank the file
-        new FileWriter(testFile);
         testDao = new BadMonsterDaoA();
     }
 
@@ -55,17 +52,13 @@ public class BadMonsterDaoATest{
         Monster retrievedMonster = testDao.getMonster(1);
         
         // Check the data is equal
-        assertEquals(monster.getName(), 
-                retrievedMonster.getName());
+        assertEquals(monster.getName(), retrievedMonster.getName());
         
-        assertEquals(monster.getType(), 
-                retrievedMonster.getType());
+        assertEquals(monster.getType(), retrievedMonster.getType());
         
-        assertEquals(monster.getPeopleEaten(),
-                retrievedMonster.getPeopleEaten());
+        assertEquals(monster.getPeopleEaten(), retrievedMonster.getPeopleEaten());
         
-        assertEquals(monster.getFavoriteFood(),
-                retrievedMonster.getFavoriteFood());   
+        assertEquals(monster.getFavoriteFood(),retrievedMonster.getFavoriteFood());   
     }
     
     @Test 
@@ -93,7 +86,7 @@ public class BadMonsterDaoATest{
         
         // First check the general contents of the list
         assertNotNull(allMonsters);
-        assertEquals(1, allMonsters.size());
+        assertEquals(2, allMonsters.size());
         
         // Then the specifics
         assertTrue(testDao.getAllMonsters().contains(monster1));
@@ -159,7 +152,7 @@ public class BadMonsterDaoATest{
         Monster removedMonster = testDao.removeMonster(1);
         
         // Check that the correct object was removed
-        assertEquals(removedMonster, 1);
+        assertEquals(removedMonster, monster1);
         
         // get all Monsters
         List<Monster> allMonsters = testDao.getAllMonsters();
@@ -177,7 +170,10 @@ public class BadMonsterDaoATest{
         // Check that the correct obejct was removed
         assertEquals(removedMonster, monster2); // should remove Happy
         
-        // Check that the contents of the list is empty
+        // Get all the monsters
+        allMonsters = testDao.getAllMonsters();
+        
+        // Then heck that the contents of the list is empty
         assertTrue(allMonsters.isEmpty());
         
         // Try to 'get' both monsters by id number, they should be null!

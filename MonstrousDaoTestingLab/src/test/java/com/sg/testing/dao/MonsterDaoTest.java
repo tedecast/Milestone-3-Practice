@@ -35,17 +35,20 @@ public class MonsterDaoTest {
     
     @Test
     public void testAddGetMonster() throws Exception {
-        
+        // Create our method test input
         Monster monster = new Monster();
         monster.setName("Fluffy");
         monster.setType(MonsterType.YETI);
         monster.setPeopleEaten(5);
         monster.setFavoriteFood("Lima Beans");
-
+        
+        // Add the monster to the DAO
         testDao.addMonster(1, monster);
 
+        // Get the monster from the DAO
         Monster gotMonster = testDao.getMonster(1);
 
+        // Check the data is equal
         assertEquals(monster.getName(), gotMonster.getName());
         assertEquals(monster.getType(), gotMonster.getType());
         assertEquals(monster.getPeopleEaten(), gotMonster.getPeopleEaten());
