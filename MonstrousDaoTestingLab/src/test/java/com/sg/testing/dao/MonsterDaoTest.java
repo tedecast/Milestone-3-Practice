@@ -5,12 +5,17 @@
  */
 package com.sg.testing.dao;
 
+import com.sg.testing.dao.implementations.AGoodMonsterDao;
+import com.sg.testing.model.Monster;
+import com.sg.testing.model.MonsterType;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.jupiter.api.BeforeEach;
 
 /**
  *
@@ -19,30 +24,132 @@ import static org.junit.Assert.*;
 public class MonsterDaoTest {
     
     MonsterDao testDao;
-    
+
     public MonsterDaoTest() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() throws Exception{
+
+    @BeforeEach
+    public void setUp() throws Exception {
         testDao = new AGoodMonsterDao();
     }
+    ​
     
-    @After
-    public void tearDown() {
+    
+    @Test
+    public void testAddGetMonster() throws Exception {
+        ​
+        Monster monster = new Monster();
+        monster.setName("Fluffy");
+        monster.setType(MonsterType.YETI);
+        monster.setPeopleEaten(5);
+        monster.setFavoriteFood("Lima Beans");
+
+        testDao.addMonster(1, monster);
+
+        Monster gotMonster = testDao.getMonster(1);
+
+        assertEquals(monster.getName(), gotMonster.getName());
+        assertEquals(monster.getType(), gotMonster.getType());
+        assertEquals(monster.getPeopleEaten(), gotMonster.getPeopleEaten());
+        assertEquals(monster.getFavoriteFood(), gotMonster.getFavoriteFood());
     }
 
     @Test
-    public void testSomeMethod() {
-        fail("The test case is a prototype.");
+    public void testGetAllMonsters() throws Exception {
+        Monster monster = new Monster();
+        monster.setName("Fluffy");
+        monster.setType(MonsterType.YETI);
+        monster.setPeopleEaten(5);
+        monster.setFavoriteFood("Lima Beans");
+
+        testDao.addMonster(1, monster);
+
+        Monster secMonster = new Monster();
+        monster.setName("Max");
+        monster.setType(MonsterType.WEREWOLF);
+        monster.setPeopleEaten(8);
+        monster.setFavoriteFood("Brussel Sprouts");
+
+        testDao.addMonster(2, secMonster);
+
+        List<Monster> allMonsters = testDao.getAllMonsters();
+
+        assertNotNull(allMonsters);
+        assertEquals(2, allMonsters.size());
+
+        assertTrue(testDao.getAllMonsters().contains(monster),
+                "The list of monsters should include Fluffy");
+        assertTrue(testDao.getAllMonsters().contains(secMonster),
+                "The list of monsters should include Max");
     }
+    ​
+    @Test
+
+    public void testRemoveMonster() throws Exception {
+        Monster monster = new Monster();
+        monster.setName("Fluffy");
+        monster.setType(MonsterType.YETI);
+        monster.setPeopleEaten(5);
+        monster.setFavoriteFood("Lima Beans");
+
+        testDao.addMonster(1, monster);
+
+        Monster secMonster = new Monster();
+        monster.setName("Max");
+        monster.setType(MonsterType.WEREWOLF);
+        monster.setPeopleEaten(8);
+        monster.setFavoriteFood("Brussel Sprouts");
+
+        testDao.addMonster(2, secMonster);
+
+        Monster removedMonster = testDao.removeMonster(1);
+        assertEquals(removedMonster, monster, "The removed monster should be Fluffy.");
+
+        List<Monster> allMonsters = testDao.getAllMonsters();
+
+        assertNotNull(allMonsters, "Monster list should not be null");
+        assertEquals(1, allMonsters.size(), "Monster list should only have one monsters");
+
+        removedMonster = testDao.removeMonster(2);
+
+        assertEquals(removedMonster, secMonster, "The removed monster should be Max");
+
+        allMonsters = testDao.getAllMonsters();
+
+        assertTrue(allMonsters.isEmpty(), "The retreived list of monsters should be empty.");
+
+        Monster gotMonster = testDao.getMonster(1);
+        assertNull(gotMonster, "Fluffy was removed, should be null.");
+
+        gotMonster = testDao.getMonster(2);
+        assertNull(gotMonster, "Max was removed, should be null.");
+    }
+
+    @Test
+    public void testEditMonster() throws Exception {
+        Monster monster = new Monster();
+        monster.setName("Fluffy");
+        monster.setType(MonsterType.YETI);
+        monster.setPeopleEaten(5);
+        monster.setFavoriteFood("Lima Beans");
+
+        String expName = "Fluffy";
+
+        testDao.addMonster(1, monster);
+        List<Monster> allMonsters = testDao.getAllMonsters();
+        assertEquals(expName, allMonsters.get(0).getName());
+
+        monster.setName("Scruffy");
+        testDao.updateMonster(1, monster);
+
+        String expNameChange = ("Scruffy");
+
+        List<Monster> secMonsters = testDao.getAllMonsters();
+        assertEquals(expNameChange, secMonsters.get(0).getName());
+    }
+​
+    
+}
+ 
     
 }
