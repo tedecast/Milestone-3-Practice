@@ -173,7 +173,7 @@ public class BadMonsterDaoATest{
         // Get all the monsters
         allMonsters = testDao.getAllMonsters();
         
-        // Then heck that the contents of the list is empty
+        // Then check that the contents of the list is empty
         assertTrue(allMonsters.isEmpty());
         
         // Try to 'get' both monsters by id number, they should be null!
