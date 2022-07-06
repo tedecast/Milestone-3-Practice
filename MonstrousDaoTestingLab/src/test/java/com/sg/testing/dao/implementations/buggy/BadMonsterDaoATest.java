@@ -52,8 +52,7 @@ public class BadMonsterDaoATest extends AGoodMonsterDao{
         
         // Check the data is equal
         assertEquals(monster.getName(), 
-                retrievedMonster.getName(), 
-                "Checking Monster Name.");
+                retrievedMonster.getName());
         
         assertEquals(monster.getType(), 
                 retrievedMonster.getType());
@@ -97,4 +96,92 @@ public class BadMonsterDaoATest extends AGoodMonsterDao{
         assertTrue(testDao.getAllMonsters().contains(monster2));
     }
     
+    
+    @Test 
+    public void testUpdateMonsters() throws Exception {
+        // create our method test inputs
+        Monster monster = new Monster();
+        monster.setName("Yuki");
+        monster.setType(MonsterType.YETI);
+        monster.setPeopleEaten(3);
+        monster.setFavoriteFood("Mice");
+        
+        // Add monster to DAO
+        testDao.addMonster(1, monster);
+        
+        // Get the monster from the DAO
+        Monster retrievedMonster = testDao.getMonster(1);
+        
+        // Check the data is equal
+        assertEquals(monster.getName(), 
+                retrievedMonster.getName());
+        
+        assertEquals(monster.getType(), 
+                retrievedMonster.getType());
+        
+        assertEquals(monster.getPeopleEaten(),
+                retrievedMonster.getPeopleEaten());
+        
+        assertEquals(monster.getFavoriteFood(),
+                retrievedMonster.getFavoriteFood());  
+        
+        // Replace / Update existing data
+        monster.setName("Bubby");
+        testDao.updateMonster(3, monster);     
+    }
+    
+    @Test 
+    public void testRemoveMonster() throws Exception {
+        // Create two new Monsters
+        // Create our first Monster
+        Monster monster1 = new Monster();
+        monster1.setName("Yuki");
+        monster1.setType(MonsterType.YETI);
+        monster1.setPeopleEaten(3);
+        monster1.setFavoriteFood("Mice");
+
+        // Create our second Monster
+        Monster monster2 = new Monster();
+        monster2.setName("Happy");
+        monster2.setType(MonsterType.VAMPIRE);
+        monster2.setPeopleEaten(6);
+        monster2.setFavoriteFood("Pork Rinds");
+
+        // Add both to the DAO
+        testDao.addMonster(1, monster1);
+        testDao.addMonster(2, monster2);
+        
+        // remove the first Monster - Yuki
+        Monster removedMonster = testDao.removeMonster(1);
+        
+        // Check that the correct object was removed
+        assertEquals(removedMonster, monster1);
+        
+        // get all Monsters
+        List<Monster> allMonsters = testDao.getAllMonsters();
+        
+        // First check the general contents of the list 
+        assertNotNull(allMonsters); // Should not be null
+        assertEquals(1, allMonsters.size()); // Should only have 1 monster
+        
+        // Then the specifics 
+        assertFalse(allMonsters.contains(monster1)); // should NOT contain Yuki
+        assertTrue (allMonsters.contains(monster2)); // 
+        
+        // remove the second Monster
+        removedMonster = testDao.removeMonster(2);
+        // Check that the correct obejct was removed
+        assertEquals(removedMonster, monster2); // should remove Happy
+        
+        // Check that the contents of the list is empty
+        assertTrue(allMonsters.isEmpty());
+        
+        // Try to 'get' both monsters by id number, they should be null!
+        Monster retrievedMonster = testDao.getMonster(1);
+        assertNull(retrievedMonster);
+        
+        retrievedMonster = testDao.getMonster(2);
+        assertNull(retrievedMonster);
+        
+    }
 }

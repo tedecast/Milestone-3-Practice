@@ -32,12 +32,10 @@ public class MonsterDaoTest {
     public void setUp() throws Exception {
         testDao = new AGoodMonsterDao();
     }
-    ​
-    
     
     @Test
     public void testAddGetMonster() throws Exception {
-        ​
+        
         Monster monster = new Monster();
         monster.setName("Fluffy");
         monster.setType(MonsterType.YETI);
@@ -77,14 +75,11 @@ public class MonsterDaoTest {
         assertNotNull(allMonsters);
         assertEquals(2, allMonsters.size());
 
-        assertTrue(testDao.getAllMonsters().contains(monster),
-                "The list of monsters should include Fluffy");
-        assertTrue(testDao.getAllMonsters().contains(secMonster),
-                "The list of monsters should include Max");
+        assertTrue(testDao.getAllMonsters().contains(monster));
+        assertTrue(testDao.getAllMonsters().contains(secMonster));
     }
-    ​
+    
     @Test
-
     public void testRemoveMonster() throws Exception {
         Monster monster = new Monster();
         monster.setName("Fluffy");
@@ -103,26 +98,26 @@ public class MonsterDaoTest {
         testDao.addMonster(2, secMonster);
 
         Monster removedMonster = testDao.removeMonster(1);
-        assertEquals(removedMonster, monster, "The removed monster should be Fluffy.");
+        assertEquals(removedMonster, monster);
 
         List<Monster> allMonsters = testDao.getAllMonsters();
 
-        assertNotNull(allMonsters, "Monster list should not be null");
-        assertEquals(1, allMonsters.size(), "Monster list should only have one monsters");
+        assertNotNull(allMonsters);
+        assertEquals(1, allMonsters.size());
 
         removedMonster = testDao.removeMonster(2);
 
-        assertEquals(removedMonster, secMonster, "The removed monster should be Max");
+        assertEquals(removedMonster, secMonster);
 
         allMonsters = testDao.getAllMonsters();
 
-        assertTrue(allMonsters.isEmpty(), "The retreived list of monsters should be empty.");
+        assertTrue(allMonsters.isEmpty());
 
         Monster gotMonster = testDao.getMonster(1);
-        assertNull(gotMonster, "Fluffy was removed, should be null.");
+        assertNull(gotMonster);
 
         gotMonster = testDao.getMonster(2);
-        assertNull(gotMonster, "Max was removed, should be null.");
+        assertNull(gotMonster);
     }
 
     @Test
@@ -146,10 +141,6 @@ public class MonsterDaoTest {
 
         List<Monster> secMonsters = testDao.getAllMonsters();
         assertEquals(expNameChange, secMonsters.get(0).getName());
-    }
-​
-    
-}
- 
-    
-}
+    }   
+}   
+
