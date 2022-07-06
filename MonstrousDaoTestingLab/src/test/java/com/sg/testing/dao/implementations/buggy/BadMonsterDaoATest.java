@@ -9,12 +9,14 @@ import com.sg.testing.dao.MonsterDao;
 import com.sg.testing.dao.implementations.AGoodMonsterDao;
 import com.sg.testing.model.Monster;
 import com.sg.testing.model.MonsterType;
+import java.io.FileWriter;
 import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Test;
+//import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import static org.junit.Assert.*;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -22,16 +24,18 @@ import org.junit.jupiter.api.BeforeEach;
  *
  * @author Teresa
  */
-public class BadMonsterDaoATest extends AGoodMonsterDao{
+public class BadMonsterDaoATest{
     
     BadMonsterDaoA testDao;
-//    
-//    public BadMonsterDaoATest(BadMonsterDaoA dao) {
-//        this.testDao = dao;
-//    }
+    
+    public BadMonsterDaoATest() {
+    }
     
     @BeforeEach
     public void setUp() throws Exception {
+        String testFile = "testroster.txt";
+        // Use the FileWrite to quickly blank the file
+        new FileWriter(testFile);
         testDao = new BadMonsterDaoA();
     }
 
@@ -152,10 +156,10 @@ public class BadMonsterDaoATest extends AGoodMonsterDao{
         testDao.addMonster(2, monster2);
         
         // remove the first Monster - Yuki
-        Monster removedMonster = testDao.removeMonster(1);
+        Monster removedMonster = testDao.removeMonster();
         
         // Check that the correct object was removed
-        assertEquals(removedMonster, monster1);
+        assertEquals(removedMonster, 1);
         
         // get all Monsters
         List<Monster> allMonsters = testDao.getAllMonsters();
@@ -184,4 +188,8 @@ public class BadMonsterDaoATest extends AGoodMonsterDao{
         assertNull(retrievedMonster);
         
     }
+//    
+//    @org.junit.jupiter.api.Test
+//    public void testBadMonstersA() {
+//    }
 }
