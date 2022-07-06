@@ -85,15 +85,15 @@ public class BadMonsterDaoATest{
         monster2.setFavoriteFood("Pork Rinds");
         
         // Add both our monsters to the DAO
-        testDao.addMonster(1, monster1);
-        testDao.addMonster(2, monster2);
+        testDao.addMonster(0, monster1);
+        testDao.addMonster(1, monster2);
         
         // Retrieve the list of all monsters within the DAO
         List<Monster> allMonsters = testDao.getAllMonsters();
         
         // First check the general contents of the list
         assertNotNull(allMonsters);
-        assertEquals(2, allMonsters.size());
+        assertEquals(1, allMonsters.size());
         
         // Then the specifics
         assertTrue(testDao.getAllMonsters().contains(monster1));
@@ -156,7 +156,7 @@ public class BadMonsterDaoATest{
         testDao.addMonster(2, monster2);
         
         // remove the first Monster - Yuki
-        Monster removedMonster = testDao.removeMonster();
+        Monster removedMonster = testDao.removeMonster(1);
         
         // Check that the correct object was removed
         assertEquals(removedMonster, 1);
