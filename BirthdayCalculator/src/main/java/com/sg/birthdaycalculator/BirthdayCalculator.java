@@ -38,7 +38,7 @@ public class BirthdayCalculator {
 //        String formatted = ld.format(DateTimeFormatter.ofPattern("MM-dd-yyyy"));
 //        System.out.println(formatted);
         DayOfWeek dayOfWeek = ld.getDayOfWeek();
-        System.out.println(dayOfWeek);
+        System.out.println("That means you were born on a " + dayOfWeek + "!");
 
         //System.out.println(ld);
 //        
