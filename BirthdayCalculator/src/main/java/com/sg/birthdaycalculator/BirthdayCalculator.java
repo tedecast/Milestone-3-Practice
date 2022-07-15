@@ -35,11 +35,15 @@ public class BirthdayCalculator {
         
         // Formats userInput
         LocalDate ld = LocalDate.parse(birthday, DateTimeFormatter.ofPattern("MM-dd-yyyy"));
-//        String formatted = ld.format(DateTimeFormatter.ofPattern("MM-dd-yyyy"));
-//        System.out.println(formatted);
+        
+        // Tell them the day of the week their birthday falls on.
         DayOfWeek dayOfWeek = ld.getDayOfWeek();
         System.out.println("That means you were born on a " + dayOfWeek + "!");
-
+        
+        // Then tell them the day of the week it falls on this year!
+        String formatted = ld.format(DateTimeFormatter.ofPattern("MM-dd-2022"));
+        dayOfWeek = ld.getDayOfWeek();
+        System.out.println("This year it falls on a " + formatted + "...");
         //System.out.println(ld);
 //        
 //        String formatted = ld.format(
