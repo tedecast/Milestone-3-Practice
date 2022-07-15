@@ -41,10 +41,14 @@ public class BirthdayCalculator {
         System.out.println("That means you were born on a " + dayOfWeek + "!");
         
         // Then tell them the day of the week it falls on this year!
-        ld = LocalDate.parse(birthday, DateTimeFormatter.ofPattern("MM-dd-2022"));
+//      String formatted = ld.format(DateTimeFormatter.ofPattern("MM-dd-2022"));
+//        DayOfWeek currentDay = DayOfWeek.from(formatted);
+//
+//        System.out.println(formatted);
+        
         dayOfWeek = ld.getDayOfWeek();
         // currentDay = formatted.getDayOfWeek();
-        System.out.println("This year it falls on a " + dayOfWeek + "...");
+        System.out.println("This year it falls on a " + dayOfWeek.name() + "...");
         //System.out.println(ld);
 //        
 //        String formatted = ld.format(
