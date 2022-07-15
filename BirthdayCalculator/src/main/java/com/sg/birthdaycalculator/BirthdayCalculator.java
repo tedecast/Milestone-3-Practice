@@ -28,15 +28,15 @@ public class BirthdayCalculator {
         System.out.println("");
         
         // Ask someone for their birthday ex: 01/01/2002
-        System.out.println("What's your birthday?");
+        System.out.println("What's your birthday?(MM-dd-yyyy format)");
         Scanner userInput = new Scanner(System.in);
         String birthday = "";
         birthday = userInput.nextLine();
         
         // Formats userInput
         LocalDate ld = LocalDate.parse(birthday, DateTimeFormatter.ofPattern("MM-dd-yyyy"));
-        String formatted = ld.format(DateTimeFormatter.ofPattern("MM-dd-yyyy"));
-        System.out.println(formatted);
+//        String formatted = ld.format(DateTimeFormatter.ofPattern("MM-dd-yyyy"));
+//        System.out.println(formatted);
         DayOfWeek dayOfWeek = ld.getDayOfWeek();
         System.out.println(dayOfWeek);
 
