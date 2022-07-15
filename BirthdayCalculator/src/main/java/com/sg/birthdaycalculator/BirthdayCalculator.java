@@ -5,11 +5,16 @@
  */
 package com.sg.birthdaycalculator;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -32,6 +37,9 @@ public class BirthdayCalculator {
         LocalDate ld = LocalDate.parse(birthday, DateTimeFormatter.ofPattern("MM-dd-yyyy"));
         String formatted = ld.format(DateTimeFormatter.ofPattern("MM-dd-yyyy"));
         System.out.println(formatted);
+        DayOfWeek dayOfWeek = ld.getDayOfWeek();
+        System.out.println(dayOfWeek);
+
         //System.out.println(ld);
 //        
 //        String formatted = ld.format(
