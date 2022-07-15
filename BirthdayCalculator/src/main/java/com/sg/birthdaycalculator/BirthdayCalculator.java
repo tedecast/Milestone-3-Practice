@@ -5,6 +5,8 @@
  */
 package com.sg.birthdaycalculator;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.Calendar;
@@ -16,23 +18,25 @@ import java.util.Scanner;
  */
 public class BirthdayCalculator {
     public static void main(String[] args) {
-        
-        String birthday = "";
-        
+
         System.out.println("Welcome to the Magical BirthDAY Calculator!");
-        
+        System.out.println("");
         // Ask someone for their birthday ex: 01/01/2002
-        System.out.println("What's your birthday? (mm-dd-yyyy format)");
+        System.out.println("What's your birthday?");
         Scanner userInput = new Scanner(System.in);
-        birthday = userInput.nextLine();
-        // converting format of date
-        Calendar calendar = Calendar.getInstance();
-        System.out.println(calendar.getTime().toString());
-        
-        
-        // Tell them the day of the week their birthday falls on.
-        
+        LocalDate ld = LocalDate.parse("01-01-2002", DateTimeFormatter.ofPattern("MM-dd-yyyy"));
+        System.out.println(ld);
+        String formatted = ld.format(
+                DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL));
+        System.out.println("That's means you were born on a " + formatted);
+        System.out.println("This year it falls on a MONDAY...");
+        LocalDate n = LocalDate.now();
+        Period diff = ld.until(n);
+        System.out.println("And since today is " + ld + " , there's only " + diff.getDays() + " more days until the next one!");
+        System.out.println("Bet yer excited to be turning " + diff.getYears());
+    }
+
         
         
     }
-}
+
